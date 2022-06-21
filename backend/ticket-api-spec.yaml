@@ -1,8 +1,14 @@
 openapi: 3.0.0
 paths:
-  /:
+  /tickets:
+    post:
+      operationId: createTicket
+      parameters: []
+      responses:
+        "201":
+          description: ""
     get:
-      operationId: getHello
+      operationId: getAll
       parameters: []
       responses:
         "200":
