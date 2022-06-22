@@ -14,7 +14,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppController = void 0;
 const common_1 = require("@nestjs/common");
+const swagger_1 = require("@nestjs/swagger");
 const app_service_1 = require("./app.service");
+const ticket_dto_1 = require("./DTOS/ticket.dto");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
@@ -28,6 +30,7 @@ let AppController = class AppController {
 };
 __decorate([
     (0, common_1.Post)(),
+    (0, swagger_1.ApiOkResponse)({ description: 'Sends back a TicketDTO', type: ticket_dto_1.TicketDTO }),
     __param(0, (0, common_1.Body)('name')),
     __param(1, (0, common_1.Body)('date')),
     __param(2, (0, common_1.Body)('beschreibung')),
@@ -37,6 +40,9 @@ __decorate([
 ], AppController.prototype, "createTicket", null);
 __decorate([
     (0, common_1.Get)(),
+    (0, swagger_1.ApiOkResponse)({
+        description: 'creates ticket Objects', type: [ticket_dto_1.TicketDTO],
+    }),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)

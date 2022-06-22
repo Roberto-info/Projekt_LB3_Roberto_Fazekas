@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.hamburger {
+    height: 50%;
+    width: 50%;
+}
+
+.button {
+    width: 10%;
+    border: none;
+    background: none;
+    margin-left: 10px;
+}

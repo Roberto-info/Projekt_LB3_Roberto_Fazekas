@@ -1,1 +1,1 @@
-{"version":3,"file":"ticket.dto.js","sourceRoot":"","sources":["../../src/DTOS/ticket.dto.ts"],"names":[],"mappings":";;;AAAA,MAAa,SAAS;IAClB,YACI,IAAY,EACZ,IAAW,EACX,YAAoB,IAClB,CAAC;CACV;AAND,8BAMC"}
+{"version":3,"file":"ticket.dto.js","sourceRoot":"","sources":["../../src/DTOS/ticket.dto.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,6CAA8C;AAE9C,MAAa,SAAS;IAClB,YACI,IAAY,EACZ,IAAW,EACX,YAAoB,IAClB,CAAC;CAOV;AALO;IADC,IAAA,qBAAW,GAAE;;uCACD;AAEb;IADC,IAAA,qBAAW,GAAE;;uCACD;AAEb;IADC,IAAA,qBAAW,GAAE;;+CACO;AAX7B,8BAYC"}
