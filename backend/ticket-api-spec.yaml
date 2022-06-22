@@ -5,14 +5,24 @@ paths:
       operationId: createTicket
       parameters: []
       responses:
-        "201":
-          description: ""
+        "200":
+          description: Sends back a TicketDTO
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TicketDTO"
     get:
       operationId: getAll
       parameters: []
       responses:
         "200":
-          description: ""
+          description: creates ticket Objects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/TicketDTO"
 info:
   title: TicketTool
   description: ""
@@ -21,4 +31,17 @@ info:
 tags: []
 servers: []
 components:
-  schemas: {}
+  schemas:
+    TicketDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        date:
+          type: string
+        beschreibung:
+          type: string
+      required:
+        - name
+        - date
+        - beschreibung

@@ -8,4 +8,5 @@ encoder.ts
 git_push.sh
 index.ts
 model/models.ts
+model/ticketDTO.ts
 variables.ts
