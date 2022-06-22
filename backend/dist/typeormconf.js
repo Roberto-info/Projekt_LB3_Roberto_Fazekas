@@ -7,8 +7,8 @@ const config = {
     port: 3306,
     username: 'root',
     database: 'ticketDB',
-    synchronize: true,
-    dropSchema: true,
+    synchronize: false,
+    dropSchema: false,
     entities: [
         ticket_entity_1.Ticket
     ]

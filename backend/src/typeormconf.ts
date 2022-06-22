@@ -7,8 +7,8 @@ const config: MysqlConnectionOptions = {
       port: 3306,
       username: 'root',
       database: 'ticketDB',
-      synchronize: true,
-      dropSchema: true,
+      synchronize: false,
+      dropSchema: false,
       entities: [
         Ticket
       ]
