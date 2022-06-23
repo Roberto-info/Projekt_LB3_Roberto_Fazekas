@@ -1,6 +1,14 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<button class="button">
+<button class="button" (click)="drawer.toggle()">
   <img class="hamburger" src="../assets/hamburger.png" alt="hamburger">
 </button>
-<h3>Ticket-Tool</h3>
+<h2>Ticket-Tool</h2>
 </nav>
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+  <p>I am navbar !!</p>
+  </mat-drawer>
+  <div class="example-sidenav-content">
+  </div>
+  </mat-drawer-container>
+  <router-outlet></router-outlet>

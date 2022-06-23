@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
-import { ApiOkResponse } from '@nestjs/swagger';
+import { ApiBody, ApiOkResponse } from '@nestjs/swagger';
 import { AppService } from './app.service';
 import { TicketDTO } from './DTOS/ticket.dto';
 import { Ticket } from './entities/ticket.entity';
@@ -8,7 +8,7 @@ import { Ticket } from './entities/ticket.entity';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-
+  @ApiBody({description: "body:TicketDTO", type:TicketDTO})
   @Post()
   @ApiOkResponse({ description: 'Sends back a TicketDTO', type: TicketDTO})
   async createTicket(@Body('name') name:string, @Body('date') date:string, @Body('beschreibung') beschreibung:string) {

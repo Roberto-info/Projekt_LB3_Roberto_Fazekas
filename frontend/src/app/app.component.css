@@ -15,3 +15,17 @@
     background: none;
     margin-left: 10px;
 }
+.example-container {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgb(155, 184, 26);
+    }
+
+.example-sidenav  {
+    width: 350px;
+    min-width: 250px;
+    max-width: 350px;
+    }

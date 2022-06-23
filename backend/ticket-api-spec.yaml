@@ -4,6 +4,13 @@ paths:
     post:
       operationId: createTicket
       parameters: []
+      requestBody:
+        required: true
+        description: body:TicketDTO
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TicketDTO"
       responses:
         "200":
           description: Sends back a TicketDTO
