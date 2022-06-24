@@ -26,6 +26,7 @@ let AppService = class AppService {
     }
     async createTicket(ticket) {
         const newTicket = this.ticketRepository.create(ticket);
+        console.log(newTicket);
         return this.ticketRepository.save(newTicket);
     }
 };

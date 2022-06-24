@@ -5,26 +5,37 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatNativeDateModule} from '@angular/material/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormComponent } from './form/form.component';
+import { TicketdisComponent } from './ticketdis/ticketdis.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
-    path: '', component: FormComponent
+    path: 'form', component: FormComponent
+  },
+  {
+    path: 'tickets', component: TicketdisComponent
   }
 ];
  
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent
+    FormComponent,
+    TicketdisComponent
   ],
   imports: [
+    MatNativeDateModule,
+    FormsModule,
     MatSidenavModule,
     RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

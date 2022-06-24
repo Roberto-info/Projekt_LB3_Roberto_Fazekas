@@ -5,6 +5,7 @@ import { generateClient } from './generate-client-options';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await generateClient(app);
+  app.enableCors();
   await app.listen(3000);
 }
 bootstrap();

@@ -1,1 +1,40 @@
-<p>form works!</p>
+<div class="container">
+  <h2>Ticket erfassen</h2>
+  <form #formData="ngForm" (ngSubmit)="onSubmit(formData.value)">
+
+    <div class="form-group">
+
+      <label for="name">Name</label><br>
+
+      <input type="text" name="name" class="form-control" ngModel>
+
+    </div>
+
+    <pre></pre>
+
+    <div class="form-group">
+
+      <label for="date">Datum yyyy-mm-tt</label><br>
+
+      <input type="text" name="date" class="form-control" ngModel>
+
+    </div>
+
+    <pre></pre>
+
+    <div class="form-group">
+
+      <label for="beschreibung">Beschreibung</label><br>
+
+      <input type="text" name="beschreibung" class="form-control" ngModel>
+
+    </div>
+
+
+    <pre></pre>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+
+  </form>
+
+</div>

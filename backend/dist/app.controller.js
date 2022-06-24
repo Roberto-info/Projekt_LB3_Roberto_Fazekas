@@ -29,6 +29,7 @@ let AppController = class AppController {
     }
 };
 __decorate([
+    (0, swagger_1.ApiBody)({ description: "body:TicketDTO", type: ticket_dto_1.TicketDTO }),
     (0, common_1.Post)(),
     (0, swagger_1.ApiOkResponse)({ description: 'Sends back a TicketDTO', type: ticket_dto_1.TicketDTO }),
     __param(0, (0, common_1.Body)('name')),

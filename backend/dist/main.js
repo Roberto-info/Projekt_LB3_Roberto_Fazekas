@@ -6,6 +6,7 @@ const generate_client_options_1 = require("./generate-client-options");
 async function bootstrap() {
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     await (0, generate_client_options_1.generateClient)(app);
+    app.enableCors();
     await app.listen(3000);
 }
 bootstrap();

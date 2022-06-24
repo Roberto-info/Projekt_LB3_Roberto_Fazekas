@@ -4,6 +4,6 @@ import { Ticket } from './entities/ticket.entity';
 export declare class AppService {
     private ticketRepository;
     constructor(ticketRepository: Repository<Ticket>);
-    getAll(): Promise<Ticket[]>;
+    getAll(): Promise<TicketDTO[]>;
     createTicket(ticket: TicketDTO): Promise<Ticket>;
 }

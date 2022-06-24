@@ -6,9 +6,13 @@
 </nav>
 <mat-drawer-container class="example-container">
   <mat-drawer #drawer class="example-sidenav" mode="side">
-  <p>I am navbar !!</p>
+  <ul>
+    <li><a [routerLink]="'form'">Tickets anlegen</a></li>
+    <li><a [routerLink]="'tickets'">Tickets einsehen</a></li>
+  </ul>
   </mat-drawer>
   <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
   </div>
-  </mat-drawer-container>
-  <router-outlet></router-outlet>
+</mat-drawer-container>
+ 

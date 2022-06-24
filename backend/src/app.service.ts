@@ -13,12 +13,13 @@ export class AppService {
 
   }
 
-  getAll(): Promise<Ticket[]>{
+  getAll(): Promise<TicketDTO[]>{
     return this.ticketRepository.find();
   }
 
   async createTicket(ticket: TicketDTO) {
     const newTicket = this.ticketRepository.create(ticket);
+    console.log(newTicket);
     return this.ticketRepository.save(newTicket);
   }
 }
